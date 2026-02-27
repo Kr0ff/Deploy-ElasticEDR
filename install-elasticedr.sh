@@ -93,7 +93,7 @@ sudo unzip /usr/share/elasticsearch/elasticsearch-ssl-http.zip -d /etc/elasticse
 
 # Replace -dns options to match your environment
 echo "[+] Generating Kibana SSL certificate"
-sudo /usr/share/elasticsearch/bin/elasticsearch-certutil cert -pem -ca /etc/elasticsearch/certs/ca/ca.p12 -name kibana-server -dns kibana.qsec.local,kibana,10.10.10.26
+sudo /usr/share/elasticsearch/bin/elasticsearch-certutil cert -pem -ca /etc/elasticsearch/certs/ca/ca.p12 -name kibana-server -dns kibana.domain.local,kibana,10.10.10.10
 
 sudo cp /etc/elasticsearch/certs/kibana/elasticsearch-ca.pem /etc/kibana/certs/elasticsearch-ca.pem
 
